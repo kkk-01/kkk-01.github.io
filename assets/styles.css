@@ -482,16 +482,3 @@ ul { padding: 0; margin: 0; list-style: none;}
 .site-footer .container { display: grid; gap: 0.6rem; }
 .site-footer a { color: #e5e7eb; }
 .small { font-size: 0.9rem; color: #cbd5e1; }
-
-@media (max-width: 540px) {
-  body { font-size: 0.96rem; }
-  .container { padding: 0 1rem; }
-  .nav-bar { height: 64px; }
-  .brand img { width: 52px; height: 52px; }
-  .nav-links a { font-size: 0.95rem; }
-  .btn-primary, .btn-ghost { font-size: 0.96rem; padding: 0.7rem 1rem; }
-  .hero h1 { font-size: 1.8rem; }
-  .hero p.lead { font-size: 0.98rem; }
-  .section-title { font-size: 1.8rem; }
-  .cta-buttons { flex-direction: column; align-items: stretch; }
-}
