@@ -493,10 +493,10 @@ p,
   gap: 1rem;
   align-self: start;
 }
-/*
+
 .contact-side.single .contact-card {
   min-height: 100%;
-}*/
+}
 
 @media (max-width: 640px) {
   .contact-hero-grid {
