@@ -23,4 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // FAQ 아코디언
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach((item) => {
+    const toggle = item.querySelector('.faq-toggle');
+    if (!toggle) return;
+    toggle.addEventListener('click', () => {
+      item.classList.toggle('open');
+    });
+  });
 });

@@ -218,6 +218,7 @@ p,
 
 .section-title { font-size: clamp(2rem, 4vw, 2.4rem); }
 .section-lead { color: var(--muted); max-width: 720px; }
+.accent-text { color: var(--accent); }
 
 .card-grid {
   display: grid;
@@ -520,8 +521,40 @@ p,
 }
 .contact-card h3 { margin-top: 0; }
 .faq { display: grid; gap: 0.75rem; margin-top: 0.75rem; }
-.faq-item { border-top: 1px solid var(--border); padding-top: 0.75rem; }
-.faq-item strong { display: block; margin-bottom: 0.35rem; color: var(--text); }
+.faq-item { border: 1px solid var(--border); border-radius: 12px; background: #fff; overflow: hidden; }
+.faq-toggle {
+  width: 100%;
+  background: none;
+  border: 0;
+  padding: 0.9rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: inherit;
+  color: var(--text);
+  cursor: pointer;
+}
+.faq-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #4b4b4b url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3E%3Cpath d='M6 10l6 6 6-6' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px 16px no-repeat;
+  display: inline-block;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.faq-item.open .faq-icon { transform: rotate(180deg); }
+.faq-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease, padding 0.25s ease;
+  padding: 0 1rem;
+}
+.faq-item.open .faq-panel {
+  max-height: 400px;
+  padding: 0 1rem 0.9rem;
+}
+.faq-item strong { display: block; margin: 0; color: var(--text); text-align: left; }
 .faq-item p { margin: 0; color: var(--muted); }
 
 .site-footer {
