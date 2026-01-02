@@ -28,9 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach((item) => {
     const toggle = item.querySelector('.faq-toggle');
-    if (!toggle) return;
+    const panel = item.querySelector('.faq-panel');
+    if (!toggle || !panel) return;
+    panel.style.maxHeight = '0px';
     toggle.addEventListener('click', () => {
-      item.classList.toggle('open');
+      const isOpen = item.classList.toggle('open');
+      panel.style.maxHeight = isOpen ? `${panel.scrollHeight}px` : '0px';
     });
   });
 });

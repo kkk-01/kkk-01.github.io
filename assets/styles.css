@@ -551,7 +551,7 @@ p,
   padding: 0 1rem;
 }
 .faq-item.open .faq-panel {
-  max-height: 400px;
+  /*max-height: 400px; */
   padding: 0 1rem 0.9rem;
 }
 .faq-item strong { display: block; margin: 0; color: var(--text); text-align: left; }
