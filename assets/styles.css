@@ -507,6 +507,15 @@ p,
   }
   .cta-btn-row { width: 100%; }
   .cta-chat-btn { flex: 1 1 140px; }
+
+  .contact-side {
+    align-self: start;
+  }
+  .contact-side.single .contact-card {
+    min-height: auto;
+    height: auto;
+    /* 명시적으로 auto 추가 */
+  }
   /* table-like 단일 컬럼으로 전환해 텍스트 좁음/넘침 방지 */
   .table-like .row { grid-template-columns: 1fr; }
   .table-like .label { border-bottom: none; padding-bottom: 0.5rem; }
