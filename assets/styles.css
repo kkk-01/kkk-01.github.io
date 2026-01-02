@@ -404,7 +404,7 @@ p,
   display: grid;
   grid-template-columns: 1fr 1.1fr;
   gap: 1.25rem;
-  align-items: stretch;
+  align-items: start;
 }
 .contact-cta-panel {
   background: linear-gradient(145deg, #f2f4f8 0%, #e7ebf2 50%, #f9fafc 100%);
@@ -501,6 +501,7 @@ p,
 @media (max-width: 640px) {
   .contact-hero-grid {
     grid-template-columns: 1fr;
+    align-items: start;
   }
   .contact-cta-panel {
     min-height: 320px;
